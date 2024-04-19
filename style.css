@@ -1,0 +1,322 @@
+:root {
+    /* Colors */
+    --primary-nutmeg: hsl(14, 45%, 36%);
+    --primary-dark-raspberry: hsl(332, 51%, 32%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-rose-white: hsl(330, 100%, 98%);
+    --neutral-eggshell: hsl(30, 54%, 90%);
+    --neutral-light-grey: hsl(30, 18%, 87%);
+    --neutral-wenge-brown: hsl(30, 10%, 34%);
+    --neutral-dark-charcoal: hsl(24, 5%, 18%);
+
+    /* Fonts */
+    --ff-young-serif: 'Young Serif';
+    --ff-outfit: 'Outfit';
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font: normal normal var(--fw-400) 16px var(--ff-outfit);
+    color: var(--neutral-wenge-brown);
+    line-height: 1.5;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--neutral-eggshell);
+}
+
+.recipe-container {
+    width: 736px;    
+    margin: 123px auto;
+    border-radius: 20px;
+    background-color: var(--neutral-white);
+}
+
+header {
+    height: 372px;    
+}
+
+img {
+    margin: 40px 40px 0 40px;
+    border-radius: 12px;
+}
+
+main {
+    margin: 0 40px;
+}
+
+.title {
+    font-family: var(--ff-young-serif);
+    font-weight: 400;
+    font-size: 37px;
+    margin: 0;
+    margin-bottom: 13px;
+}
+
+.description {
+    margin-bottom: 31px;
+}
+.preparation {
+    height: 177px;
+    border: solid 1px var(--neutral-rose-white);
+    margin-bottom: 40px;
+    border-radius: 12px;
+    background-color: var(--neutral-rose-white);
+}
+
+.preparation-header {
+    margin-top: 25px;
+    margin-left: 27px;
+    margin-bottom: 5px;
+    font: 600 19.5px var(--ff-outfit);
+    color: var(--primary-dark-raspberry);
+}
+
+ .preparation ul {
+    
+    padding-left: 46px;
+}
+
+.preparation li {   
+    padding-left: 21px;
+} 
+
+.preparation li {
+    padding-top: 9px;  
+}
+
+.preparation li::marker {
+    color: var(--primary-dark-raspberry);
+    font-weight: 800;
+    font-size: 13px;
+    padding-left: 76px;
+}
+
+.preparation li b, .instructions li b {
+    font-weight: 700;
+}
+
+.ingredients {
+    border-bottom: solid 1px var(--neutral-light-grey);
+    height: 234px;
+}
+
+.ingredients-header, .instructions-header, .nutrition-header {
+    color: var(--primary-nutmeg);
+    font-family: var(--ff-young-serif);
+    font-size: 27px;
+    line-height: 1em;
+    margin-bottom: 23px;
+}
+
+.ingredients ul {   
+    padding-left: 12px;
+}
+
+.ingredients li {
+    padding-left: 28px;
+    margin-bottom: 8px;
+
+}
+
+.ingredients li::marker {
+    color: var(--primary-nutmeg);
+    content: '\25AA';
+    font-weight: 800;
+    font-size: 13px;
+   
+}
+
+.instructions {
+    border-bottom: solid 1px var(--neutral-light-grey);
+    height: 363px;
+    margin-top: 33px;
+}
+
+.instructions ol {
+    padding-left: 25px;
+}
+
+/* marker 1. is not formatting into Outfit ff properly */
+.instructions li::marker {
+    color: var(--primary-nutmeg);
+    font-weight: 800;
+    font-family: var(--ff-outfit);
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+}
+
+.nutrition {
+    margin-top: 32px;
+}
+
+.table-description {
+    margin-bottom: 12px;
+}
+
+.table {
+    height: 220px;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 27px;
+}
+
+.category {
+    padding-left: 32px;
+    height: 48px;
+    width: 334px;
+}
+
+.value {
+    color: var(--primary-nutmeg);
+    font-weight: bold;
+    
+}
+
+.nutrition-table td {
+    border-bottom: solid 1px var(--neutral-light-grey);
+}
+
+.category.bottom {
+    border: none;
+    margin-bottom: 27px;
+}
+.value.bottom {
+    border: none;
+    margin-bottom: 27px;
+
+}
+
+@media screen and (max-width: 375px) {   
+    * {
+        font-size: 15.7px;
+    }
+ 
+    .recipe-container {
+        width: 375px;
+        margin: 0;    
+    }
+    
+    header {
+        height: 211px;
+    }
+
+    img {
+        width: 375px;
+        height: 171px;
+        margin: 0;
+        border-radius: 0;
+    }
+  
+    main {
+        margin: 0 33px;
+        font-size: 10px;
+    }
+    
+    .title {
+        font-family: var(--ff-young-serif);
+        color: var(--neutral-dark-charcoal);
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 1;
+        margin: 0;
+        margin-bottom: 24px;
+    }
+    
+    .description {
+        margin-bottom: 33px;
+    }
+
+    .preparation {
+        height: 196px;
+        /* border: solid 1px red; */
+        border: solid 1px var(--neutral-rose-white);
+        margin-bottom: 35px;
+        border-radius: 12px;
+        background-color: var(--neutral-rose-white);
+    }
+ 
+    .preparation-header {
+        margin-top: 20px;
+        margin-left: 23px;
+        font: 600 19.5px var(--ff-outfit);
+        color: var(--primary-dark-raspberry);
+    }
+   
+    .preparation ul {
+        padding-left: 0;
+        padding-left: 3px;
+        padding-right: 31px;
+
+        vertical-align: center;
+    }   
+    
+    .preparation li {
+        display: flex;
+        align-items: center;
+        padding-left: 26px;
+    }
+
+    .preparation .bullet {
+        color: var(--primary-dark-raspberry);
+        font-size: 21px;
+    }
+    .preparation .item {
+        padding-left: 27px;
+    }   
+
+    
+    .preparation .bold{
+        font-weight: 700;
+    }
+  
+    .ingredients {
+        height: 256px;
+    }
+        
+    .instructions {
+        height: 699px;
+    }
+   
+    .instructions li {
+        margin-bottom: 9px;
+    }
+    
+    .nutrition {
+        padding-right: 5px;
+    }
+   
+    .category {
+        padding-left: 32px;
+        width: 159px;
+    }   
+}
+
