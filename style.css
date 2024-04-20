@@ -99,13 +99,16 @@ main {
     padding-left: 46px;
 }
 
+.bullet {
+    display: none;
+}
+
+
 .preparation li {   
     padding-left: 21px;
-} 
-
-.preparation li {
     padding-top: 9px;  
-}
+
+} 
 
 .preparation li::marker {
     color: var(--primary-dark-raspberry);
@@ -279,6 +282,7 @@ main {
         vertical-align: center;
     }   
     
+    
     .preparation li {
         display: flex;
         align-items: center;
@@ -286,6 +290,7 @@ main {
     }
 
     .preparation .bullet {
+        display: contents;
         color: var(--primary-dark-raspberry);
         font-size: 21px;
     }
